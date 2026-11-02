@@ -1,0 +1,39 @@
+{
+ "_fixture_note": "SYNTHETIC records in the real openFDA device/event record shape (see gzf_records_trimmed.json). Built to exercise spec v1.1 rule 9 edge cases; keys and names are invented for the test.",
+ "meta": {"results": {"skip": 0, "limit": 999, "total": 6}},
+ "results": [
+  {"mdr_report_key": "900001", "date_received": "20240105", "event_type": "Injury",
+   "_case": "two device entries, same manufacturer (case and whitespace differ): counts once",
+   "device": [
+    {"device_sequence_number": "1", "device_report_product_code": "GZF", "manufacturer_d_name": "Curonix LLC", "generic_name": "PERIPHERAL NERVE STIMULATOR"},
+    {"device_sequence_number": "2", "device_report_product_code": "GZF", "manufacturer_d_name": " CURONIX LLC ", "generic_name": "PERIPHERAL NERVE STIMULATOR"}
+   ]},
+  {"mdr_report_key": "900002", "date_received": "20240110", "event_type": "Malfunction",
+   "_case": "two matching manufacturers: counts once for each",
+   "device": [
+    {"device_sequence_number": "1", "device_report_product_code": "GZF", "manufacturer_d_name": "CURONIX LLC", "generic_name": "PERIPHERAL NERVE STIMULATOR"},
+    {"device_sequence_number": "2", "device_report_product_code": "GZF", "manufacturer_d_name": "NALU MEDICAL INC", "generic_name": "PERIPHERAL NERVE STIMULATOR"}
+   ]},
+  {"mdr_report_key": "900003", "date_received": "20240201", "event_type": "Injury",
+   "_case": "second device entry has a different product code: ignored",
+   "device": [
+    {"device_sequence_number": "1", "device_report_product_code": "GZF", "manufacturer_d_name": "NALU MEDICAL INC", "generic_name": "PERIPHERAL NERVE STIMULATOR"},
+    {"device_sequence_number": "2", "device_report_product_code": "LGW", "manufacturer_d_name": "OTHER CODE MAKER INC", "generic_name": "STIMULATOR, SPINAL-CORD"}
+   ]},
+  {"mdr_report_key": "900004", "date_received": "20240215", "event_type": "Injury",
+   "_case": "manufacturer_d_name absent: (not stated)",
+   "device": [
+    {"device_sequence_number": "1", "device_report_product_code": "GZF", "generic_name": "PERIPHERAL NERVE STIMULATOR"}
+   ]},
+  {"mdr_report_key": "900005", "date_received": "20240301", "event_type": "Other",
+   "_case": "manufacturer_d_name blank: (not stated)",
+   "device": [
+    {"device_sequence_number": "1", "device_report_product_code": "GZF", "manufacturer_d_name": "   ", "generic_name": "PERIPHERAL NERVE STIMULATOR"}
+   ]},
+  {"mdr_report_key": "900006", "date_received": "20240302", "event_type": "Injury",
+   "_case": "no device entry with the selected product code: counted on the no-match line",
+   "device": [
+    {"device_sequence_number": "1", "device_report_product_code": "LGW", "manufacturer_d_name": "OTHER CODE MAKER INC", "generic_name": "STIMULATOR, SPINAL-CORD"}
+   ]}
+ ]
+}

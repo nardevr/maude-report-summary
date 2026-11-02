@@ -1,0 +1,115 @@
+{
+ "meta": {
+  "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+  "terms": "https://open.fda.gov/terms/",
+  "license": "https://open.fda.gov/license/",
+  "last_updated": "2026-10-13"
+ },
+ "results": [
+  {
+   "time": "20210104",
+   "count": 1
+  },
+  {
+   "time": "20210106",
+   "count": 2
+  },
+  {
+   "time": "20210113",
+   "count": 3
+  },
+  {
+   "time": "20210115",
+   "count": 1
+  },
+  {
+   "time": "20210118",
+   "count": 1
+  },
+  {
+   "time": "20210119",
+   "count": 1
+  },
+  {
+   "time": "20210121",
+   "count": 2
+  },
+  {
+   "time": "20210122",
+   "count": 2
+  },
+  {
+   "time": "20210126",
+   "count": 1
+  },
+  {
+   "time": "20210302",
+   "count": 2
+  },
+  {
+   "time": "20210304",
+   "count": 6
+  },
+  {
+   "time": "20210307",
+   "count": 2
+  },
+  {
+   "time": "20210308",
+   "count": 2
+  },
+  {
+   "time": "20210310",
+   "count": 1
+  },
+  {
+   "time": "20210311",
+   "count": 2
+  },
+  {
+   "time": "20210312",
+   "count": 2
+  },
+  {
+   "time": "20210313",
+   "count": 1
+  },
+  {
+   "time": "20210314",
+   "count": 1
+  },
+  {
+   "time": "20210319",
+   "count": 1
+  },
+  {
+   "time": "20210320",
+   "count": 1
+  },
+  {
+   "time": "20210321",
+   "count": 1
+  },
+  {
+   "time": "20210325",
+   "count": 2
+  },
+  {
+   "time": "20210326",
+   "count": 1
+  },
+  {
+   "time": "20210328",
+   "count": 1
+  },
+  {
+   "time": "20210330",
+   "count": 1
+  },
+  {
+   "time": "20210331",
+   "count": 1
+  }
+ ],
+ "_fixture_note": "Real openFDA response https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&count=date_received fetched 2026-11-02T15:10:54+00:00, trimmed to days in 2021-01 and 2021-03 only (2021-02 removed on purpose to test zero-filling)."
+}

@@ -1,0 +1,114 @@
+{
+ "_fixture_note": "Real GZF records from these openFDA responses: https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=0 fetched 2026-11-02T15:10:49+00:00; https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=999 fetched 2026-11-02T15:10:52+00:00; https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=1998 fetched 2026-11-02T15:10:53+00:00. Trimmed to the first two records of each event_type by date_received (only one 'Other' exists), fields trimmed to those the tool uses, meta.results.total set to the trimmed record count.",
+ "meta": {
+  "disclaimer": "Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.",
+  "terms": "https://open.fda.gov/terms/",
+  "license": "https://open.fda.gov/license/",
+  "last_updated": "2026-10-13",
+  "results": {
+   "skip": 0,
+   "limit": 999,
+   "total": 7
+  }
+ },
+ "results": [
+  {
+   "mdr_report_key": "11114831",
+   "report_number": "3010676138-2020-00195",
+   "date_received": "20210104",
+   "event_type": "Injury",
+   "device": [
+    {
+     "device_sequence_number": "3014",
+     "device_report_product_code": "GZF",
+     "manufacturer_d_name": "STIMWAVE TECHNOLOGIES INC.",
+     "generic_name": "PERIPHERAL NERVE STIMULATOR"
+    }
+   ]
+  },
+  {
+   "mdr_report_key": "11126985",
+   "report_number": "3010676138-2020-00187",
+   "date_received": "20210106",
+   "event_type": "Injury",
+   "device": [
+    {
+     "device_sequence_number": "19393",
+     "device_report_product_code": "GZF",
+     "manufacturer_d_name": "STIMWAVE TECHNOLOGIES INC.",
+     "generic_name": "PERIPHERAL NERVE STIMULATOR"
+    }
+   ]
+  },
+  {
+   "mdr_report_key": "11416260",
+   "report_number": "3010676138-2021-00024",
+   "date_received": "20210304",
+   "event_type": "Malfunction",
+   "device": [
+    {
+     "device_sequence_number": "311126",
+     "device_report_product_code": "GZF",
+     "manufacturer_d_name": "STIMWAVE TECHNOLOGIES INC.",
+     "generic_name": "PERIPHERAL NERVE STIMULATOR"
+    }
+   ]
+  },
+  {
+   "mdr_report_key": "11417744",
+   "report_number": "3010676138-2021-00027",
+   "date_received": "20210304",
+   "event_type": "Malfunction",
+   "device": [
+    {
+     "device_sequence_number": "311750",
+     "device_report_product_code": "GZF",
+     "manufacturer_d_name": "STIMWAVE TECHNOLOGIES INC.",
+     "generic_name": "PERIPHERAL NERVE STIMULATOR"
+    }
+   ]
+  },
+  {
+   "mdr_report_key": "12222730",
+   "report_number": "3010676138-2021-00157",
+   "date_received": "20210724",
+   "event_type": "Death",
+   "device": [
+    {
+     "device_sequence_number": "1119658",
+     "device_report_product_code": "GZF",
+     "manufacturer_d_name": "STIMWAVE TECHNOLOGIES INC.",
+     "generic_name": "PERIPHERAL NERVE STIMULATOR"
+    }
+   ]
+  },
+  {
+   "mdr_report_key": "12804838",
+   "report_number": "3010676138-2021-00227",
+   "date_received": "20211112",
+   "event_type": "Death",
+   "device": [
+    {
+     "device_sequence_number": "1703356",
+     "device_report_product_code": "GZF",
+     "manufacturer_d_name": "STIMWAVE TECHNOLOGIES INC.",
+     "generic_name": "WEARABLE ANTENNA ASSEMBLY"
+    }
+   ]
+  },
+  {
+   "mdr_report_key": "18994296",
+   "report_number": "MW5153327",
+   "date_received": "20240327",
+   "event_type": "Other",
+   "device": [
+    {
+     "device_sequence_number": "2048026",
+     "device_report_product_code": "GZF",
+     "manufacturer_d_name": "CURONIX LLC",
+     "generic_name": "STIMULATOR, PERIPHERAL NERVE, IMPLANTED (PAIN RELIEF)"
+    }
+   ]
+  }
+ ]
+}
