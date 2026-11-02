@@ -1,0 +1,19 @@
+name: tests
+
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Install everything except anthropic: tests must pass without it (spec v1.1, rule 8).
+      # No secrets and no live API calls: tests use recorded fixtures and block network access.
+      - run: grep -v '^anthropic' requirements.txt > ci-requirements.txt && pip install -r ci-requirements.txt
+      - run: pytest -q
