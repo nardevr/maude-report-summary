@@ -72,6 +72,10 @@ def write_monthly_png(monthly: pd.DataFrame, product_code: str, path: Path) -> N
     plt.close(fig)
 
 
+def _iso(d: str | None) -> str:
+    return f"{d[:4]}-{d[4:6]}-{d[6:8]}" if d and len(d) == 8 else (d or "n/a")
+
+
 def _failed(section: str, error: str) -> str:
     return f"**Section failed: {section}.** {error}"
 
@@ -187,7 +191,21 @@ def write_outputs(res: dict, out: Path) -> Path:
 
     add("## 4. Narrative themes")
     add("")
-    add(res["themes_line"])
+    th = res["themes"]
+    if th.status != "ok":
+        add(th.line)
+    else:
+        add(f"Themes in the narratives of the {fmt(th.sample_size)} most recent reports with narrative text "
+            f"(`date_received` {_iso(th.sample_first)} to {_iso(th.sample_last)}), summarised by `{th.model}`. "
+            "Labels and descriptions are written by the model and describe what the narratives say; they are not "
+            "causal findings. The report count for each theme is computed by this tool from the cited report keys. "
+            "Input sent: `raw/llm_request.json`. Model output: `raw/llm_response.json`.")
+        add("")
+        for t in th.themes:
+            label = " ".join(t["label"].split())
+            desc = " ".join(t["description"].split())
+            add(f"- **{label}** ({fmt(t['n_reports'])} {'report' if t['n_reports'] == 1 else 'reports'}). {desc}  ")
+            add(f"  Report keys: {', '.join(t['report_keys'])}")
     add("")
 
     add("## 5. Limitations")

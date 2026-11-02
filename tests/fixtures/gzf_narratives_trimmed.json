@@ -1,0 +1,59 @@
+{
+ "_fixture_note": "Real GZF records from these openFDA responses: https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=0 fetched 2026-11-02T15:13:17+00:00; https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=999 fetched 2026-11-02T15:13:20+00:00; https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=1998 fetched 2026-11-02T15:13:22+00:00. The six most recent by date_received, trimmed to mdr_report_key, date_received, event_type and mdr_text.",
+ "results": [
+  {
+   "mdr_report_key": "50951794",
+   "date_received": "20260930",
+   "event_type": "Malfunction",
+   "mdr_text": []
+  },
+  {
+   "mdr_report_key": "50951514",
+   "date_received": "20260930",
+   "event_type": "Injury",
+   "mdr_text": []
+  },
+  {
+   "mdr_report_key": "50949994",
+   "date_received": "20260930",
+   "event_type": "Injury",
+   "mdr_text": []
+  },
+  {
+   "mdr_report_key": "50949618",
+   "date_received": "20260930",
+   "event_type": "Malfunction",
+   "mdr_text": []
+  },
+  {
+   "mdr_report_key": "50949318",
+   "date_received": "20260930",
+   "event_type": "Malfunction",
+   "mdr_text": [
+    {
+     "text_type_code": "Description of Event or Problem",
+     "text": "The Nalu Representative (rep) reported that the patient noticed not having pain relief about 2 weeks prior to seeing the physician. The Clinic took x-ray of the knee which showed both leads were severed. The patient is planning to get a Total Knee Arthroplasty (TKA) - which the Nalu system will be explanted at that time. At this time, there is no revision or explant scheduled."
+    },
+    {
+     "text_type_code": "Additional Manufacturer Narrative",
+     "text": "After conducting a post-acquisition, retrospective review of Nalu Peripheral Nerve Stimulation complaint records, Boston Scientific determined that this event meets MDR reporting criteria. The following MDR information is being submitted as part of CAPA investigation PCAR42.It is unknown if the device has been explanted. The reported device was not returned for evaluation; Therefore, the root cause of the reported event could not be determined."
+    }
+   ]
+  },
+  {
+   "mdr_report_key": "50948697",
+   "date_received": "20260930",
+   "event_type": "Malfunction",
+   "mdr_text": [
+    {
+     "text_type_code": "Description of Event or Problem",
+     "text": "The Nalu Representative (rep) reported that the trial lead fractured upon removal. The physician left the electrode portion in and was not removed, as he is not sure whether it is the lateral or medial superior genicular lead that fractured. There was no reported patient harm or injury."
+    },
+    {
+     "text_type_code": "Additional Manufacturer Narrative",
+     "text": "After conducting a post-acquisition, retrospective review of Nalu Peripheral Nerve Stimulation complaint records, Boston Scientific determined that this event meets MDR reporting criteria. The following MDR information is being submitted as part of CAPA investigation PCAR42.The rep provided photos that show a fracture of the lead. The reported device was not returned for evaluation; Therefore, the root cause of the reported event could not be determined."
+    }
+   ]
+  }
+ ]
+}
