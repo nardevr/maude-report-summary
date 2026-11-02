@@ -1,0 +1,37 @@
+# Secrets
+.env
+.env.*
+
+# Generated reports
+reports/
+
+# Virtual environments
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Gate packets (built from git archive, never committed)
+maude_gate*.zip
+GATE_*_REPORT.md
+
+# Sandbox / editor placeholders (owner-directed)
+.claude/
+.bashrc
+.gitconfig
+.gitmodules
+.mcp.json
+.idea/
+.vscode/
