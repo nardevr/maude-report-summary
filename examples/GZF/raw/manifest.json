@@ -1,0 +1,45 @@
+[
+  {
+    "file": "records_page01_skip0.json.gz",
+    "url": "https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=0",
+    "fetched_utc": "2026-11-02T15:13:17+00:00",
+    "http_status": 200,
+    "attempts": 1,
+    "records_in_response": 999,
+    "meta_results_total": 2607
+  },
+  {
+    "file": "records_page02_skip999.json.gz",
+    "url": "https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=999",
+    "fetched_utc": "2026-11-02T15:13:20+00:00",
+    "http_status": 200,
+    "attempts": 1,
+    "records_in_response": 999,
+    "meta_results_total": 2607
+  },
+  {
+    "file": "records_page03_skip1998.json.gz",
+    "url": "https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&sort=date_received:asc&limit=999&skip=1998",
+    "fetched_utc": "2026-11-02T15:13:22+00:00",
+    "http_status": 200,
+    "attempts": 1,
+    "records_in_response": 609,
+    "meta_results_total": 2607
+  },
+  {
+    "file": "count_date_received.json.gz",
+    "url": "https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&count=date_received",
+    "fetched_utc": "2026-11-02T15:13:23+00:00",
+    "http_status": 200,
+    "attempts": 1,
+    "records_in_response": 916
+  },
+  {
+    "file": "count_event_type_exact.json.gz",
+    "url": "https://api.fda.gov/device/event.json?search=device.device_report_product_code:GZF+AND+date_received:[20210101+TO+20261102]&count=event_type.exact",
+    "fetched_utc": "2026-11-02T15:13:23+00:00",
+    "http_status": 200,
+    "attempts": 1,
+    "records_in_response": 4
+  }
+]
