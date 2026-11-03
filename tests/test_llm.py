@@ -112,6 +112,30 @@ def test_valid_output_in_full_report(tmp_path, monkeypatch):
     assert call.calls[0]["model"] == "claude-haiku-5-5"
 
 
+OVERLAP = "A report can appear under more than one theme, so theme counts can add up to more than the sample size."
+
+
+@pytest.mark.parametrize("themes", [GOOD, {"themes": GOOD["themes"][:1]}], ids=["two themes", "one theme"])
+def test_overlap_note_directly_under_theme_list_whenever_themes_shown(tmp_path, monkeypatch, themes):
+    monkeypatch.setenv(llm.KEY_ENV, "test-key-not-real")
+    monkeypatch.chdir(tmp_path)
+    cli.run("GZF", date(2021, 1, 1), tmp_path / "out", False, session=FakeSession(NARR),
+            sleep=lambda s: None, now=NOW, llm_call=fake_call(json.dumps(themes)))
+    lines = (tmp_path / "out/report.md").read_text().splitlines()
+    last_keys = max(i for i, l in enumerate(lines) if l.startswith("  Report keys: "))
+    assert lines[last_keys + 1:last_keys + 3] == ["", OVERLAP]
+    assert lines.count(OVERLAP) == 1
+
+
+@pytest.mark.parametrize("no_llm,text", [(True, json.dumps(GOOD)), (False, '{"themes": []}')], ids=["--no-llm", "fallback"])
+def test_overlap_note_absent_when_no_themes_shown(tmp_path, monkeypatch, no_llm, text):
+    monkeypatch.setenv(llm.KEY_ENV, "test-key-not-real")
+    monkeypatch.chdir(tmp_path)
+    cli.run("GZF", date(2021, 1, 1), tmp_path / "out", no_llm, session=FakeSession(NARR),
+            sleep=lambda s: None, now=NOW, llm_call=fake_call(text))
+    assert OVERLAP not in (tmp_path / "out/report.md").read_text()
+
+
 def test_invalid_output_in_full_report_carries_on(tmp_path, monkeypatch):
     monkeypatch.setenv(llm.KEY_ENV, "test-key-not-real")
     monkeypatch.chdir(tmp_path)

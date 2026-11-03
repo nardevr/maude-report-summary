@@ -9,6 +9,8 @@ import pandas as pd
 
 TOP_N_MANUFACTURERS = 10
 CREDIT_LINE = "Data provided by the U.S. Food and Drug Administration."
+THEME_OVERLAP_NOTE = ("A report can appear under more than one theme, so theme counts can add up to more than "
+                      "the sample size.")
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 LIMITATIONS_MD = """\
@@ -206,6 +208,8 @@ def write_outputs(res: dict, out: Path) -> Path:
             desc = " ".join(t["description"].split())
             add(f"- **{label}** ({fmt(t['n_reports'])} {'report' if t['n_reports'] == 1 else 'reports'}). {desc}  ")
             add(f"  Report keys: {', '.join(t['report_keys'])}")
+        add("")
+        add(THEME_OVERLAP_NOTE)
     add("")
 
     add("## 5. Limitations")
