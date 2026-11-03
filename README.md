@@ -1,7 +1,7 @@
 # maude-report-summary
 
 A small command-line tool that turns the public openFDA device adverse event data (FDA's MAUDE database) into a one-page report for one device product code: reports received per month, reports by event type per year, manufacturers by number of unique reports, and narrative themes from a capped sample of recent reports.
-Every number in the report is computed in Python from saved openFDA responses; the optional Claude step only writes theme labels and descriptions, and is checked strictly before anything is shown.
+Every number in the report is computed in Python from saved openFDA responses; the optional Claude step only writes theme labels and descriptions. Its output is checked automatically for format, for the absence of digits and for report keys that belong to the sample sent, but nothing checks automatically what the labels and descriptions mean.
 
 ## Example output
 
