@@ -44,7 +44,7 @@ From FDA's MAUDE page (<https://www.fda.gov/medical-devices/mandatory-reporting-
 
 - "MDR data is not intended to be used either to evaluate rates of adverse events, evaluate a change in event rates over time, or to compare adverse event occurrence rates across devices."
 
-The monthly chart therefore shows how many reports FDA received each month, not event rates or trends in events.
+The monthly chart shows how many reports FDA received each month, not event rates or trends in events.
 
 In addition, report counts reflect reporting behaviour (for example manufacturer reporting practice, recalls and publicity) as well as events, and duplicate reports can occur.
 

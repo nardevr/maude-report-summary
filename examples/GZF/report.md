@@ -87,9 +87,11 @@ From openFDA (<https://open.fda.gov/apis/device/event/>):
 - "Adverse event reports submitted to FDA do not undergo extensive validation or verification."
 - "potential under-reporting of events and lack of information about frequency of device use."
 
-From FDA's MAUDE page (<https://www.fda.gov/medical-devices/mandatory-reporting-requirements-manufacturers-importers-and-device-user-facilities/manufacturer-and-user-facility-device-experience-database-maude>):
+From FDA's MAUDE page (<https://www.fda.gov/medical-devices/mandatory-reporting-requirements-manufacturers-importers-and-device-user-facilities/about-manufacturer-and-user-facility-device-experience-maude-database>):
 
-- MDR (Medical Device Report) data "is not intended to be used either to evaluate rates of adverse events" or "to compare adverse event occurrence rates across devices."
+- "MDR data is not intended to be used either to evaluate rates of adverse events, evaluate a change in event rates over time, or to compare adverse event occurrence rates across devices."
+
+The monthly chart shows how many reports FDA received each month, not event rates or trends in events.
 
 In addition: report counts reflect reporting behaviour (for example manufacturer reporting
 practice, recalls and publicity) as well as events. Duplicate reports can occur.
