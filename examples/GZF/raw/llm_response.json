@@ -1,6 +1,6 @@
 {
-  "fetched_utc": "2026-11-03T02:31:58+00:00",
-  "text": "{\"themes\":[{\"label\":\"Lead fracture or breakage during procedures\",\"description\":\"Narratives describe leads that were severed, fractured, or broke during placement, removal, or extraction, with imaging or inspection noted in some reports.\",\"report_keys\":[\"50949318\",\"50948697\",\"50899604\",\"50869095\",\"50869092\"]},{\"label\":\"Incision site infection and wound concerns\",\"description\":\"Reports describe suspected or confirmed infections, reopened or eroding incisions, and antibiotic treatment at or near the implant site.\",\"report_keys\":[\"50937584\",\"50936648\",\"50928010\",\"50901693\",\"50900578\",\"50886588\",\"50885184\",\"50804957\"]},{\"label\":\"High impedance and connection readings\",\"description\":\"Narratives describe impedance errors, red ohms, or bad contact readings during implant, trial, or programming, with some reports noting troubleshooting steps.\",\"report_keys\":[\"50947936\",\"50867972\",\"50867030\",\"50858500\",\"50842915\",\"50842912\",\"50840744\",\"50839747\"]},{\"label\":\"Component damage and unexpected stimulation\",\"description\":\"Reports describe damaged connectors, boots, introducers, or other components, and some describe shocks or changing amplitude settings reported by patients.\",\"report_keys\":[\"50885794\",\"50840744\",\"50867030\",\"50899606\",\"50839514\"]},{\"label\":\"Bleeding, procedure setup, and trial removal\",\"description\":\"Narratives describe bleeding after an implant, a case aborted over positioning, patient-removed trial leads, and patient-reported pain or follow-up contact issues.\",\"report_keys\":[\"50808902\",\"50812902\",\"50872338\",\"50871705\",\"50869437\",\"50792854\"]}]}",
+  "fetched_utc": "2026-11-03T03:53:56+00:00",
+  "text": "{\"themes\":[{\"label\":\"Lead, connector, or component damage reported\",\"description\":\"Narratives describe leads, introducers, connectors, or implanted components reported as fractured, torn, broken, or damaged during or after handling.\",\"report_keys\":[\"50949318\",\"50948697\",\"50869095\",\"50869092\",\"50899604\",\"50899606\",\"50840744\",\"50867030\"]},{\"label\":\"Infection and incision site complications\",\"description\":\"Narratives describe suspected or treated infections, eroding or reopened incisions, exposed leads, and bleeding at the implant site.\",\"report_keys\":[\"50937584\",\"50936648\",\"50928010\",\"50901693\",\"50900578\",\"50885184\",\"50804957\",\"50808902\",\"50886588\"]},{\"label\":\"High impedance and red ohms readings\",\"description\":\"Narratives describe impedance checks showing high or red readings on one or more contacts or leads during implant, programming, or follow-up.\",\"report_keys\":[\"50947936\",\"50867972\",\"50867030\",\"50842915\",\"50842912\",\"50858500\",\"50839747\"]},{\"label\":\"Shocking, burning, or changing stimulation\",\"description\":\"Narratives describe patients reporting shocks, burning sensations, or changes in amplitude or stimulation, along with related back spasm reports.\",\"report_keys\":[\"50885794\",\"50839514\",\"50947936\",\"50871705\"]},{\"label\":\"Patient removal, nonuse, or aborted procedures\",\"description\":\"Narratives describe patients removing trial leads or not using the system, procedures aborted for positioning concerns, and patients who were lost to follow-up.\",\"report_keys\":[\"50872338\",\"50869437\",\"50812902\",\"50792854\"]}]}",
   "stop_reason": "end_turn",
   "model": "claude-haiku-5-5",
   "usage": {
@@ -12,12 +12,12 @@
     "cache_read_input_tokens": 0,
     "inference_geo": "global",
     "input_tokens": 13023,
-    "output_tokens": 1327,
+    "output_tokens": 1427,
     "output_tokens_details": {
-      "thinking_tokens": 795
+      "thinking_tokens": 912
     },
     "service_tier": "standard",
     "speed": "standard"
   },
-  "request_id": "req_011CgfDAdphJcyrT8wrUMcN8"
+  "request_id": "req_011CgfKR9k7P3TFo8FjRjLPs"
 }
