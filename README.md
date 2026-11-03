@@ -9,7 +9,7 @@ The committed sample for product code GZF (*Stimulator, Peripheral Nerve, Implan
 
 ![MAUDE reports received per month, product code GZF](examples/GZF/monthly.png)
 
-## How to run (WSL, macOS or Linux, Python 3.11 or newer)
+## How to run (WSL, macOS or Linux; tested with Python 3.12, the version CI uses)
 
 ```bash
 git clone https://github.com/nardevr/maude-report-summary.git && cd maude-report-summary
@@ -20,6 +20,8 @@ PYTHONPATH=src python -m maude_summary --product-code GZF --since 2021-01-01 --o
 The report is written to `reports/GZF/report.md`. No openFDA key is needed.
 
 **Narrative themes (optional).** Put a Claude API key in the variable `MAUDE_ANTHROPIC_API_KEY`, either in your shell or in a `.env` file in the repo folder (`.env` is git-ignored), and drop `--no-llm`. The tool reads its key from that variable only and never from `ANTHROPIC_API_KEY`. The model defaults to `claude-haiku-5-5` and can be changed with `MAUDE_LLM_MODEL`. `--llm-sample N` sets how many recent reports are sent (default 30, maximum 50). Without a key and without `--no-llm`, the report says the themes step was skipped.
+
+**Exit codes.** A failed openFDA fetch exits 1; a failed Claude step exits 0, with "Themes unavailable" shown in the report and the terminal.
 
 **Tests** run offline, without an API key and without the `anthropic` package: `pytest -q`.
 
@@ -38,9 +40,11 @@ From openFDA (<https://open.fda.gov/apis/device/event/>):
 - "Adverse event reports submitted to FDA do not undergo extensive validation or verification."
 - "potential under-reporting of events and lack of information about frequency of device use."
 
-From FDA's MAUDE page (<https://www.fda.gov/medical-devices/mandatory-reporting-requirements-manufacturers-importers-and-device-user-facilities/manufacturer-and-user-facility-device-experience-database-maude>):
+From FDA's MAUDE page (<https://www.fda.gov/medical-devices/mandatory-reporting-requirements-manufacturers-importers-and-device-user-facilities/about-manufacturer-and-user-facility-device-experience-maude-database>):
 
-- MDR (Medical Device Report) data "is not intended to be used either to evaluate rates of adverse events" or "to compare adverse event occurrence rates across devices."
+- "MDR data is not intended to be used either to evaluate rates of adverse events, evaluate a change in event rates over time, or to compare adverse event occurrence rates across devices."
+
+The monthly chart therefore shows how many reports FDA received each month, not event rates or trends in events.
 
 In addition, report counts reflect reporting behaviour (for example manufacturer reporting practice, recalls and publicity) as well as events, and duplicate reports can occur.
 
