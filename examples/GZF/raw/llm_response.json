@@ -1,0 +1,23 @@
+{
+  "fetched_utc": "2026-11-03T02:31:58+00:00",
+  "text": "{\"themes\":[{\"label\":\"Lead fracture or breakage during procedures\",\"description\":\"Narratives describe leads that were severed, fractured, or broke during placement, removal, or extraction, with imaging or inspection noted in some reports.\",\"report_keys\":[\"50949318\",\"50948697\",\"50899604\",\"50869095\",\"50869092\"]},{\"label\":\"Incision site infection and wound concerns\",\"description\":\"Reports describe suspected or confirmed infections, reopened or eroding incisions, and antibiotic treatment at or near the implant site.\",\"report_keys\":[\"50937584\",\"50936648\",\"50928010\",\"50901693\",\"50900578\",\"50886588\",\"50885184\",\"50804957\"]},{\"label\":\"High impedance and connection readings\",\"description\":\"Narratives describe impedance errors, red ohms, or bad contact readings during implant, trial, or programming, with some reports noting troubleshooting steps.\",\"report_keys\":[\"50947936\",\"50867972\",\"50867030\",\"50858500\",\"50842915\",\"50842912\",\"50840744\",\"50839747\"]},{\"label\":\"Component damage and unexpected stimulation\",\"description\":\"Reports describe damaged connectors, boots, introducers, or other components, and some describe shocks or changing amplitude settings reported by patients.\",\"report_keys\":[\"50885794\",\"50840744\",\"50867030\",\"50899606\",\"50839514\"]},{\"label\":\"Bleeding, procedure setup, and trial removal\",\"description\":\"Narratives describe bleeding after an implant, a case aborted over positioning, patient-removed trial leads, and patient-reported pain or follow-up contact issues.\",\"report_keys\":[\"50808902\",\"50812902\",\"50872338\",\"50871705\",\"50869437\",\"50792854\"]}]}",
+  "stop_reason": "end_turn",
+  "model": "claude-haiku-5-5",
+  "usage": {
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 13023,
+    "output_tokens": 1327,
+    "output_tokens_details": {
+      "thinking_tokens": 795
+    },
+    "service_tier": "standard",
+    "speed": "standard"
+  },
+  "request_id": "req_011CgfDAdphJcyrT8wrUMcN8"
+}

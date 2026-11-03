@@ -4,9 +4,9 @@
 |:---|:---|
 | Product code | GZF |
 | Generic name | PERIPHERAL NERVE STIMULATOR (most frequent `device.generic_name` on matching device entries) |
-| Query window | `date_received` 2021-01-01 to 2026-11-02 |
-| openFDA last updated | 2026-10-13 (`meta.last_updated`) |
-| Run timestamp | 2026-11-02 15:13:17 UTC / 2026-11-02 23:13:17 Singapore (UTC+8) |
+| Query window | `date_received` 2021-01-01 to 2026-11-03 |
+| openFDA last updated | 2026-10-20 (`meta.last_updated`) |
+| Run timestamp | 2026-11-03 02:31:49 UTC / 2026-11-03 10:31:49 Singapore (UTC+8) |
 | Totals check | MATCH: sum of monthly counts 2,607 = search total (`meta.results.total`) 2,607 = raw records fetched 2,607 (2,607 unique `mdr_report_key`) |
 | Event-type check | MATCH: window totals from the raw-record pivot equal `count=event_type.exact` |
 
@@ -64,7 +64,18 @@ Unique reports = distinct `mdr_report_key` naming the manufacturer (`manufacture
 
 ## 4. Narrative themes
 
-Themes not generated: run with --no-llm.
+Themes in the narratives of the 30 most recent reports with narrative text (`date_received` 2026-09-16 to 2026-09-30), summarised by `claude-haiku-5-5`. Labels and descriptions are written by the model and describe what the narratives say; they are not causal findings. The report count for each theme is computed by this tool from the cited report keys. Input sent: `raw/llm_request.json`. Model output: `raw/llm_response.json`.
+
+- **Lead fracture or breakage during procedures** (5 reports). Narratives describe leads that were severed, fractured, or broke during placement, removal, or extraction, with imaging or inspection noted in some reports.  
+  Report keys: 50949318, 50948697, 50899604, 50869095, 50869092
+- **Incision site infection and wound concerns** (8 reports). Reports describe suspected or confirmed infections, reopened or eroding incisions, and antibiotic treatment at or near the implant site.  
+  Report keys: 50937584, 50936648, 50928010, 50901693, 50900578, 50886588, 50885184, 50804957
+- **High impedance and connection readings** (8 reports). Narratives describe impedance errors, red ohms, or bad contact readings during implant, trial, or programming, with some reports noting troubleshooting steps.  
+  Report keys: 50947936, 50867972, 50867030, 50858500, 50842915, 50842912, 50840744, 50839747
+- **Component damage and unexpected stimulation** (5 reports). Reports describe damaged connectors, boots, introducers, or other components, and some describe shocks or changing amplitude settings reported by patients.  
+  Report keys: 50885794, 50840744, 50867030, 50899606, 50839514
+- **Bleeding, procedure setup, and trial removal** (6 reports). Narratives describe bleeding after an implant, a case aborted over positioning, patient-removed trial leads, and patient-reported pain or follow-up contact issues.  
+  Report keys: 50808902, 50812902, 50872338, 50871705, 50869437, 50792854
 
 ## 5. Limitations
 
