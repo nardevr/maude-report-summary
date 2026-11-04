@@ -201,7 +201,7 @@ def test_no_llm_needs_no_key_and_makes_no_call(tmp_path, monkeypatch):
     call = fake_call(json.dumps(GOOD))
     cli.run("GZF", date(2021, 1, 1), tmp_path, True, session=FakeSession(NARR), sleep=lambda s: None, now=NOW, llm_call=call)
     assert call.calls == []
-    assert "Themes not generated: run with --no-llm." in (tmp_path / "report.md").read_text()
+    assert "Themes not generated: this run used --no-llm." in (tmp_path / "report.md").read_text()
 
 
 def test_key_from_env_then_dotenv_only(tmp_path):

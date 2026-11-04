@@ -75,7 +75,7 @@ RULE_RKEYS = "report_keys is a non-empty list of unique strings"
 RULE_IN_SAMPLE = "every report key is in the sample sent"
 RULE_DIGITS = "no digit in any label or description"
 
-NO_LLM_LINE = "Themes not generated: run with --no-llm."
+NO_LLM_LINE = "Themes not generated: this run used --no-llm."
 NO_KEY_LINE = f"Themes skipped: {KEY_ENV} is not set."
 
 
